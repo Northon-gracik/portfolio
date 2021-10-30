@@ -1,0 +1,108 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 80vh;
+}
+
+.Header{
+    background: linear-gradient(rgb(0, 0, 0), rgba(0,0,0, .50) 100%);
+    display: flex;
+    position: relative;
+    position: 0px;
+    height: 10vh;
+    width: 100%;
+    font-family: cursive;
+    padding: 0px 15px;
+}
+
+.Header .Container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 35px;
+}
+
+.Header .Container nav{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.Header .Container nav a{
+    cursor: pointer;
+}
+
+/* .Header .Button{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background-color: black;
+    border: 0px;
+    color: white;
+    font-family: cursive;
+    font-size: 16px;
+    padding: 0px 10px;
+    cursor: pointer;
+    transform: rotateX(90);
+} */
+
+
+.Title{
+    width: 50%;
+    color: #E42044;
+    display: contents;
+    padding: 15px;
+}
+
+.Body{
+    background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0) 90%), url("http://cdn.mos.cms.futurecdn.net/EzgdmaCQuT84bgDL4fhXZS.jpg");
+    background-position: center;    
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    display: flex;
+    align-items:  center;
+}
+
+.Bio{
+    margin: 15px;
+    font-size: 20px;
+
+}
+
+.Text{
+}
+
+.SeeMore{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid grey;
+    width: 160px;
+    padding: 10px;
+    justify-content: space-between;
+    margin: 0px 15px;
+}
+
+footer{
+    position: relative;
+    height: 100px;
+    background: black;
+    bottom: 0px;
+    width: 100%;
+    color: cyan;
+    margin: 0px;
+}
+
+
+
+
+              

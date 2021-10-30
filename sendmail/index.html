@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <style>
+        body {
+            font-size: 16px;
+        }
+    
+        #wrapper {
+            height: 400px;
+            display: ruby;
+            background-color: #ff002f;
+            padding: 100px;
+            color: white;
+        }
+    
+        .container {
+            backdrop-filter: blur(10px) saturate(150%);
+            -webkit-backdrop-filter: blur(10px) saturate(150%);
+            background-color: rgba(17, 25, 40, 0.3);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            padding: 50px;
+        }
+    
+        a {
+            font-weight: 700;
+            color: #6c1dff;
+            text-decoration: none;
+        }
+    </style>
+    
+    <body>
+        <div id="wrapper">
+            <div class="container">
+                <h1>Ticket</h1>
+                <p>{{user.name}}, Agradecemos pela interação com nosso Portifolio.</p>
+                <a href="https://rickandmortyapi.com/api/character/{{idOrder}}">Clique aqui para completar a sua
+                    transação</a>
+                <p>Esses são os produtos selecionados: </p>
+                {{#each products}}
+                <div>
+                    {{this.name}} - {{this.value}}
+                </div>
+                {{/each}}
+                <p>Total: {{valueTotal}}</p>
+                <p>Forma de Pagameto: Boleto</p>
+            </div>
+        </div>
+    </body>
+    
+    </html>

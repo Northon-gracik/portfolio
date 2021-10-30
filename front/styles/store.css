@@ -1,0 +1,58 @@
+.Row{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    position: absolute;
+    display: none;
+}
+.bar{
+    width: 200px;
+    background-color: #E42044;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Hamburguer{
+    background-color: #999999;
+    width: 45px; 
+    height: 45px;
+    position: relative;
+    border-radius: 50%;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.HamburguerChild{
+    background-color: #E42044;
+    width: 25px;
+    height: 5px;
+}
+
+.barSup{
+    width: 100%;
+    background-color: #999999;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    margin: 10px;
+    padding: 10px;
+    background-color: #E42044;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
