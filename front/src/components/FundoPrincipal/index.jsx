@@ -18,9 +18,3 @@ function FundoPrincipal() {
 
 export default FundoPrincipal;
 
-/* <a href="store" >
-<div className="SeeMore">
-<p>Veja Mais </p>
-<img src="outline_arrow_forward_white_24dp.png" />
-</div>
-</a> */

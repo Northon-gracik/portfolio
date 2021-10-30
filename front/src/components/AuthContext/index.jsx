@@ -37,13 +37,7 @@ export function AuthProvider({ children }){
     }, [])
 
     async function signIn({email, password}){
-        const data
-        //  { token, user } 
-        = await authUser(email, password);
-        console.log("ctx", data);
-        const token = data.token;
-        const user = data.user;
-
+        const { token, user } = await authUser(email, password);
         setAuthenticate(token, user);
 
         Router.push("/");

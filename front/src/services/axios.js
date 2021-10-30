@@ -3,7 +3,7 @@ import { parseCookies } from "nookies";
 
 export function getAPIClient(ctx){
     const api = axios.create({
-        baseURL: "http://localhost:8000/v1/"
+        baseURL: process.env.url
       });
       
       api.interceptors.request.use(async config => {

@@ -8,7 +8,6 @@ import { getOrderByUser } from "../src/services/apiGet";
 
 import Header from "../src/components/Header";
 import OrdersDashboard from "../src/components/OrdersDashboard";
-import ListOrder from "../src/components/ListOrder";
 
 
 
