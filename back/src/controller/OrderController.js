@@ -48,7 +48,7 @@ class OrderController {
 
     async getOrdersLength(req, res){
         try {
-            const service = await orderService.getOrdersLength();
+            const service = await orderService.getOrdersData();
             res.status(200).json(service);
         }catch (err){
             res.status(400).json({ "error": err.message });

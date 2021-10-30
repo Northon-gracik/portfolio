@@ -82,10 +82,13 @@ orderService.payment = async (id) => {
     return orderUpdate;
 }
 
-orderService.getOrdersLength = async () => {
+orderService.getOrdersData = async () => {
     const allOrders = await orderRepository.findAll();
-    allOrders.map( order => console.log( "[status]", order.statusPayment))
-    return allOrders.length;
+    const filter = status => allOrders.filter(order => order.statusPayment === status);
+    const pending = filter("Pending");
+    const processing = filter("Processing");
+    const accepted = filter("Accepted");
+    return { length: allOrders.length, pending, processing, accepted };
 }
 
 const createOrderItens = async (orderItens, idOrder) => {
@@ -129,7 +132,7 @@ const getProductByOrder = async (orderItens) => {
     return itens;
 }
 
-const sendTicket = async (producer, value ) => {
+const sendTicket = async ( producer, value ) => {
     producer.send({
         topic: 'ticket-payment',
         compression: CompressionTypes.GZIP,

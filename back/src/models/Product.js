@@ -8,9 +8,7 @@ const productSchema = new Schema({
     quantity: Number,
     stack: String,
     description: String,
-    links: {
-        type:[]
-    },
+    link:  String,
     created_at:{ 
         type: Date, 
         default: Date.now

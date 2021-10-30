@@ -5,6 +5,7 @@ import { connect } from "react-redux"
 import * as CartAction from "../../src/store/actions/cart";
 
 import { getProduct } from "../../src/services/apiGet";
+import ActiveLink from "../../src/components/ActiveLink";
 
 function Products({ toggleCart, cart, product }) {
 
@@ -16,7 +17,7 @@ function Products({ toggleCart, cart, product }) {
                 <h1>{product.name}</h1>
                 <p>{product.stack}</p>
                 <h2>{product.description}</h2>
-                <a href={`${product.linkNode}`}>Link Node</a>
+                <ActiveLink href={`${product.link}`}>Link</ActiveLink>
                 <br />
                 <button onClick={() => toggleCart(product)}>Colocar no carrinho</button>
             </div>

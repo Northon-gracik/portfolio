@@ -11,7 +11,7 @@ const getItensByOrder = async () => await getDefault(`findItensByOrder`);
 
 const getUserByToken = async () => await getDefault(`findByToken`);
 
-const getOrdersLength = async () => await getDefault(`getOrdersLength`);
+const getOrdersData = async () => await getDefault(`getOrdersData`);
 
 // const fun = async (...params) => await getDefault(`urlString`);
 
@@ -25,4 +25,4 @@ const getDefault = async url => {
     }
 }
 
-export { getAllProducts, getProduct, getOrderByUser, getItensByOrder, getUserByToken, getOrdersLength };
+export { getAllProducts, getProduct, getOrderByUser, getItensByOrder, getUserByToken, getOrdersData };

@@ -19,7 +19,7 @@ const ordersDashboard = props => {
                                         <div>
                                             <p>{order.statusPayment}</p>
                                             <p>{order.valueTotal}</p>
-                                            <ListOrder id={order._id} />
+                                            <ListOrder id={order._id} status={order.statusPayment} />
                                         </div>
                                         <br />
                                     </ul>

@@ -13,7 +13,7 @@ function ActiveLink({ children, href }) {
   }
 
   return (
-    <a href={href} onClick={handleClick}>
+    <a href={href} onClick={handleClick} >
       {children}
     </a>
   )

@@ -10,7 +10,7 @@ import { getOrderItensByOrder } from "../../services/apiPost.js";
 let i = 0;
 
 const ListOrder = props => {
-    const { id, changeOrder } = props;
+    const { id, changeOrder, status } = props;
     const [itens, setItens] = useState([]);
 
     get(getProductsByOrder, id, setItens);
@@ -26,7 +26,13 @@ const ListOrder = props => {
                 itens.map(item => item.name)
             }
             <br />
-            <button onClick={changeFormClose}>Clique aqui para finalizar</button>
+            {
+                status === "Pending"
+                ?
+                <button onClick={changeFormClose}>Clique aqui para finalizar</button>
+                :
+                <div></div>
+            }
         </div>
     )
 };

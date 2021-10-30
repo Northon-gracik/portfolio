@@ -8,7 +8,7 @@ import { connect } from "react-redux"
 import * as OrderAction from "../src/store/actions/order";
 import { closeOrder } from "../src/services/apiPost";
 
-function FormClose({order}) {
+function FormClose({order, cleanOrder}) {
     const { register, handleSubmit } = useForm();
 
     const formValues = data => {
@@ -16,6 +16,7 @@ function FormClose({order}) {
             type: data.paymentType,
         }
         closeOrder(order, payment)
+        cleanOrder();
         Router.push("/dashboard")
     }
     return (

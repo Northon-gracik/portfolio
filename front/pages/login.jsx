@@ -3,14 +3,13 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../src/components/authContext";
 import { Header } from "../src/components/Header";
 
-import api from "../src/services/api";
 
 
 function Login ({data}) {
 
     const { register, handleSubmit } = useForm();
 
-    const { signIn, user, signOut } = useContext(AuthContext)
+    const { signIn } = useContext(AuthContext);
 
     async function handleSignIn (data) {
         await signIn(data)
@@ -54,12 +53,5 @@ function Login ({data}) {
     )
     
 }
-
-// export async function getServerSideProps() {
-//     const res = await fetch(``)
-//     const data = await res.json()
-  
-//     return { props: { data } }
-// }
 
 export default Login;

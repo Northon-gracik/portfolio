@@ -10,7 +10,9 @@ const createOrder = async order => await postDefault(`createOrder`, { order })
 
 const closeOrder = async ( id, payment ) => await postDefault(`closeOrder`, { id, payment });
 
-// const fun = async (...params) => await postDefault( `urlString`, object )
+const createProduct = async product => await postDefault( `createProduct`, { product } );
+
+// const fun = async (...params) => await postDefault( `urlString`, object );
 
 const postDefault = async ( url, object ) => {
     try {
@@ -18,8 +20,8 @@ const postDefault = async ( url, object ) => {
         // console.log('[post]',url, object);
         return data;
     } catch (error) {
-        console.log(error);
+        return error;
     }
 }
 
-export { getOrderItensByOrder, authUser, registerAccount, createOrder, closeOrder };
+export { getOrderItensByOrder, authUser, registerAccount, createOrder, closeOrder, createProduct };

@@ -43,14 +43,12 @@ router.get("/findItensByOrder", orderItemController.findByOrder); //buscar os pe
 
 router.use(isAdmin); //saber se o usuario e adiministrador
 
-router.post("/createProduct", productController.createProduct); //criar productRepository
+router.post("/createProduct", productController.createProduct); //criar product
 
 router.post("/restockProduct", productController.restock); //reabastecer produto
 
-router.get("/getOrdersLength", orderController.getOrdersLength);
+router.get("/getOrdersData", orderController.getOrdersLength);
 
 router.get("/a",( req, res ) => res.json({"ok": true}));
-
-
 
 export { router } 

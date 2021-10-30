@@ -15,7 +15,6 @@ import ListOrder from "../src/components/ListOrder";
 function dashboard(props) {
     const [orders, setOrders] = useState([]);
 
-    // getOrderByUser().then( data => setOrders(data) );
     get(getOrderByUser, {}, setOrders);
 
     const { user } = useContext(AuthContext);
@@ -31,7 +30,11 @@ function dashboard(props) {
                         <h3>{user.name}</h3>
                         <div>
                             <h4>Meus pedidos:</h4>
-                            <OrdersDashboard orders={orders} />
+                            {!orders[0] ?
+                                <h4>Parace que não tem pedidos, aproveite e peça agora</h4>
+                                :
+                                <OrdersDashboard orders={orders} />
+                            }
                         </div>
                     </>
                 }
