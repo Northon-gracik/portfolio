@@ -8,4 +8,4 @@ RUN npm i
 
 EXPOSE 8000
 
-CMD ["npm", "run", "startDocker"]
+CMD ["npm", "run", "start"]

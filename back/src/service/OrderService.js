@@ -69,7 +69,7 @@ orderService.closeOrder = async (id, payment, producer) => {
     const user = await userService.findById(order.idUser);
     const orderItens = await orderItemService.findByOrder(order.id);
     const products = await getProductByOrder(orderItens);
-    sendTicket(producer, JSON.stringify({ payment, order, products, user }))
+    // sendTicket(producer, JSON.stringify({ payment, order, products, user }))
     return orderUpdate;
 }
 
