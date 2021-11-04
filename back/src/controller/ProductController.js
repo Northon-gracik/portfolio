@@ -15,6 +15,7 @@ class ProductController{
 
     async findAll(req, res) {
         try {
+            console.log("--CONTROLLER--");
             const allProducts = await productService.findAll();
             res.status(200).json(allProducts);
         }catch (err) {

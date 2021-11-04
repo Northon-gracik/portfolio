@@ -15,6 +15,7 @@ class ProductService {
     }
 
     async findAll() {
+        console.log("--SERVICE--");
         const allProducts = await productRepository.findAll();
         return allProducts;
     }

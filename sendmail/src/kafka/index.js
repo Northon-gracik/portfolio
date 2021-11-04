@@ -1,19 +1,21 @@
-import { Kafka } from 'kafkajs';
+import Kafka from 'kafkajs';
 
-const kafka = new Kafka({
-  brokers: ['localhost:9092'],
-  clientId: 'sendMail',
-})
+const clientId = 'sendMail';
+const brokers = ['portfolio_kafka_1:9092'];
 
 const topic = 'ticket-payment';
 const groupId = 'portifolio-group-receiver';
 
-const consumer = kafka.consumer({ groupId })
+const kafka = new Kafka.Kafka({ clientId, brokers });
 
 const producer = kafka.producer();
+const consumer = kafka.consumer({ groupId });
 
-await consumer.connect();
+(async () => {
+    await producer.connect();
+    await consumer.connect();
+})();
 
-await consumer.subscribe({ topic });
+consumer.subscribe({ topic });
 
 export { producer, consumer };

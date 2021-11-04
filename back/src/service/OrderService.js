@@ -1,4 +1,4 @@
-import { CompressionTypes } from 'kafkajs';
+import Kafka from 'kafkajs';
 
 import { OrderRepository } from "../repository/OrderRepository.js";
 import { UserRepository } from "../repository/UserRepository.js";
@@ -135,7 +135,7 @@ const getProductByOrder = async (orderItens) => {
 const sendTicket = async ( producer, value ) => {
     producer.send({
         topic: 'ticket-payment',
-        compression: CompressionTypes.GZIP,
+        compression: Kafka.CompressionTypes.GZIP,
         messages: [
             { value },
         ]

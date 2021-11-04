@@ -3,6 +3,7 @@ import { Product } from "../models/Product.js"
 class ProductRepository {
 
     findAll(){
+        console.log("--REPOSITORY--");
         return Product.find();
     }
 
