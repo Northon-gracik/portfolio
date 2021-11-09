@@ -3,9 +3,14 @@ import Corner from "react-github-corner"
 import Header from "../src/components/Header";
 import FundoPrincipal from "../src/components/FundoPrincipal";
 import { getAllProducts } from "../src/services/apiGet.js";
+import { useState } from "react";
 
 function Home (props) {
-  const { dataProducts } = props
+  // const { dataProducts } = props
+
+  const [dataProducts, setDataProducts] = useState([]);
+
+  getAllProducts().then( data => console.log(data))
 
   return (
     <div>
@@ -39,15 +44,15 @@ function Home (props) {
   )
 }
 
-export async function getServerSideProps(){
-  const dataProducts = await getAllProducts();
+// export async function getServerSideProps(){
+//   const dataProducts = await getAllProducts();
 
-  return {
-    props:{
-      dataProducts
-    }
-  }
-}
+//   return {
+//     props:{
+//       dataProducts
+//     }
+//   }
+// }
 
 
 
