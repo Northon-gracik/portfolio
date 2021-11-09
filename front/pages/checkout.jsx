@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+
 import Router from "next/router";
 
 import Product from "../src/services/product";
@@ -10,7 +10,7 @@ import { connect } from "react-redux"
 import { bindActionCreators } from "redux";
 
 import * as CartAction from "../src/store/actions/cart";
-import { AuthContext } from "../src/components/authContext";
+import { AuthContext } from "../src/components/authContext/index.jsx";
 import { useContext } from "react";
 
 function Cart({ cleanCart }){ 

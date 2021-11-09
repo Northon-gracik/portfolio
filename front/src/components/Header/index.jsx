@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import Product  from "../../services/product";
-import { AuthContext } from "../authContext"
+import { AuthContext } from "../authContext/index.jsx";
 import ActiveLink from "../ActiveLink"
 
 

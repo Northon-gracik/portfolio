@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AuthContext } from "../src/components/authContext";
+import { AuthContext } from "../src/components/authContext/index.jsx";
 import { useForm } from "react-hook-form";
 
 function Cadastro(props) {

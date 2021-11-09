@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../src/components/authContext";
-import { Header } from "../src/components/Header";
+import { AuthContext } from "../src/components/authContext/index.jsx";
 
 
 

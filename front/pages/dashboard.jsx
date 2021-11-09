@@ -2,7 +2,7 @@ import { parseCookies } from "nookies";
 import { useContext, useEffect, useState } from "react";
 import { getAPIClient } from "../src/services/axios";
 
-import { AuthContext } from "../src/components/authContext";
+import { AuthContext } from "../src/components/authContext/index.jsx";
 
 import { getOrderByUser } from "../src/services/apiGet";
 
