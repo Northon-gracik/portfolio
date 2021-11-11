@@ -11,14 +11,16 @@ import '../styles/cart.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-//    <AuthProvider>
-//      <Provider store={store} >
-//        <PersistGate loading={undefined} persistor={persistor}>
-          <Component {...pageProps} />
-//        </PersistGate>
-//      </Provider>
-//    </AuthProvider>
+    <Component {...pageProps} />
   )
 }
-
 export default MyApp
+
+    //   <AuthProvider>
+    //   <Provider store={store} > 
+    //      <PersistGate loading={undefined} persistor={persistor}> 
+    //      </PersistGate >
+    //   </Provider >
+    // </AuthProvider > 
+
+

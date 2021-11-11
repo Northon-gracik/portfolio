@@ -1,23 +1,23 @@
-import { useContext } from "react";
-import { AuthContext } from "../src/components/authContext/index.jsx";
-import { useForm } from "react-hook-form";
+// import { useContext } from "react";
+// import { AuthContext } from "../src/components/authContext/index.jsx";
+// import { useForm } from "react-hook-form";
 
 function Cadastro(props) {
-    const { register, handleSubmit } = useForm();
-    const { registerAccount } = useContext(AuthContext)
+    // const { register, handleSubmit } = useForm();
+    // const { registerAccount } = useContext(AuthContext)
 
-    async function handleCreateAccount(data) {
-        const { password, retryPassword } = data;
+    // async function handleCreateAccount(data) {
+    //     const { password, retryPassword } = data;
 
-        if (password === retryPassword) {
-            await registerAccount(data);
-        }
+    //     if (password === retryPassword) {
+    //         await registerAccount(data);
+    //     }
 
-    }
+    // }
 
     return (
         <div >
-            <h1>Cadastro</h1>
+            {/* <h1>Cadastro</h1>
             <form onSubmit={handleSubmit(handleCreateAccount)}>
                 <label htmlFor="fname">
                     Name:
@@ -73,7 +73,7 @@ function Cadastro(props) {
                 </label>
                 <br />
                 <button>Cadastro</button>
-            </form>
+            </form> */}
         </div>
     )
 }

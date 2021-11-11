@@ -1,24 +1,24 @@
-import { useContext } from "react";
-import { useForm } from "react-hook-form";
-import { AuthContext } from "../src/components/authContext/index.jsx";
+// import { useContext } from "react";
+// import { useForm } from "react-hook-form";
+// import { AuthContext } from "../src/components/authContext/index.jsx";
 
 
 
 function Login ({data}) {
 
-    const { register, handleSubmit } = useForm();
+    // const { register, handleSubmit } = useForm();
 
-    const { signIn } = useContext(AuthContext);
+    // const { signIn } = useContext(AuthContext);
 
-    async function handleSignIn (data) {
-        await signIn(data)
-    }
+    // async function handleSignIn (data) {
+    //     await signIn(data)
+    // }
 
     
     return(
         
         <div>
-            <h1>Login</h1>
+            {/* <h1>Login</h1>
             <form onSubmit={handleSubmit(handleSignIn)}> 
                 <label htmlFor="fname">
                     Email:
@@ -46,7 +46,7 @@ function Login ({data}) {
                 <br/>
                 <button>Login</button>
             </form>
-            <p>Não tem conta, <a href="/cadastro">Faça uma agora</a></p>
+            <p>Não tem conta, <a href="/cadastro">Faça uma agora</a></p> */}
                 
         </div>
     )

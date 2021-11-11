@@ -1,27 +1,27 @@
-import { parseCookies } from "nookies";
-import { getOrdersData } from "../src/services/apiGet";
-import { getAPIClient } from "../src/services/axios";
-import { useForm } from "react-hook-form";
+// import { parseCookies } from "nookies";
+// import { getOrdersData } from "../src/services/apiGet";
+// import { getAPIClient } from "../src/services/axios";
+// import { useForm } from "react-hook-form";
 
-import Header from "../src/components/Header";
-import { createProduct } from "../src/services/apiPost";
+// import Header from "../src/components/Header";
+// import { createProduct } from "../src/services/apiPost";
 
 const admin = () => {
-    const { register, handleSubmit } = useForm();
-    getOrdersData().then(data => console.log(data));
+    // const { register, handleSubmit } = useForm();
+    // getOrdersData().then(data => console.log(data));
 
-    const handleCreateProduct = data => {
-        data = {
-            ...data, 
-            quantity: parseInt(data.quantity),
-            price: parseInt(data.price)
-        }
-        createProduct(data)
-    };
+    // const handleCreateProduct = data => {
+    //     data = {
+    //         ...data, 
+    //         quantity: parseInt(data.quantity),
+    //         price: parseInt(data.price)
+    //     }
+    //     createProduct(data)
+    // };
 
     return (
         <div>
-            <Header />
+            {/* <Header />
             <h3>Cadastrar Produto</h3>
 
             <form onSubmit={handleSubmit(handleCreateProduct)}>
@@ -85,33 +85,33 @@ const admin = () => {
                 </label>
                 <br />
                 <button>Criar</button>
-            </form>
+            </form> */}
         </div>
     )
 }
-export async function getServerSideProps(ctx) {
-    // const apiClient = getAPIClient(ctx)
-    // const { 'portifolio-Token': token } = parseCookies(ctx);
+// export async function getServerSideProps(ctx) {
+//     // const apiClient = getAPIClient(ctx)
+//     // const { 'portifolio-Token': token } = parseCookies(ctx);
 
-    // apiClient.defaults.headers['authorization'] = `Bearer ${token}`;
+//     // apiClient.defaults.headers['authorization'] = `Bearer ${token}`;
 
-    // const { data } = await apiClient.get('a')
+//     // const { data } = await apiClient.get('a')
 
-    // if (!token && !data) {
-    //     return {
-    //         redirect: {
-    //             destination: '/login',
-    //             permanent: false
-    //         }
-    //     }
-    // }
+//     // if (!token && !data) {
+//     //     return {
+//     //         redirect: {
+//     //             destination: '/login',
+//     //             permanent: false
+//     //         }
+//     //     }
+//     // }
 
-    return {
-        props: {
-        }
-    }
+//     return {
+//         props: {
+//         }
+//     }
 
-}
+// }
 
 export default admin;
 
