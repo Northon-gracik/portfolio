@@ -6,6 +6,7 @@ import Router from "next/router";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux"
 import * as OrderAction from "../src/store/actions/order";
+
 import { closeOrder } from "../src/services/apiPost";
 
 function FormClose(

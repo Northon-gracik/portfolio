@@ -9,8 +9,6 @@ import { getOrderByUser } from "../src/services/apiGet";
 import Header from "../src/components/Header";
 import OrdersDashboard from "../src/components/OrdersDashboard";
 
-
-
 function dashboard(props) {
     const [orders, setOrders] = useState([]);
 

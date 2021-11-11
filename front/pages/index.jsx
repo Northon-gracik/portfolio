@@ -1,9 +1,10 @@
+import { useState } from "react";
 import Corner from "react-github-corner"
 
 import Header from "../src/components/Header";
 import FundoPrincipal from "../src/components/FundoPrincipal";
+
 import { getAllProducts } from "../src/services/apiGet.js";
-import { useState } from "react";
 
 function Home(props) {
   const { dataProducts } = props
