@@ -9,7 +9,7 @@ import { AuthContext } from "../AuthContext";
 function Header() {
     //    const { signOut, user } = useContext(AuthContext);
     //    const product = Product(); 
-
+    const user = {}
        async function logout() {
         //    await signOut();
        }
