@@ -2,7 +2,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
 import { persistor, store } from "../src/store";
-import { AuthProvider } from '../src/components/authContext';
+import { AuthProvider } from '../src/components/AuthContext';
 
 import '../styles/globals.css';
 import '../styles/index.css';
