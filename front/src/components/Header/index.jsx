@@ -1,18 +1,18 @@
-//import { useContext } from "react";
+import { useContext } from "react";
 
 import ActiveLink from "../ActiveLink";
 
-//import Product  from "../../services/product";
-import { AuthContext } from "../authContext";
+import Product  from "../../services/product";
+import { AuthContext } from "../AuthContext";
 
 
 function Header() {
-    //    const { signOut, user } = useContext(AuthContext);
-    //    const product = Product(); 
+       const { signOut, user } = useContext(AuthContext);
+       const product = Product(); 
 
-    //    async function logout() {
-    //        await signOut();
-    //    }
+       async function logout() {
+           await signOut();
+       }
 
     return (
         <header className="Header">
@@ -22,7 +22,7 @@ function Header() {
 
                 </ActiveLink>
             </div>
-            {/*
+            
                 <nav>
                     {!user ?
                         <>
@@ -36,7 +36,7 @@ function Header() {
                     }
                     <a href="/checkout">{product.length}</a>
                 </nav>
-             */}
+            
         </header>
     )
 }
