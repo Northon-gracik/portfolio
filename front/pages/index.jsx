@@ -7,7 +7,7 @@ import FundoPrincipal from "../src/components/FundoPrincipal";
 import { getAllProducts } from "../src/services/apiGet.js";
 
 function Home(props) {
-  const { dataProducts } = props
+  // const { dataProducts } = props
 
   const [dataProducts, setDataProducts] = useState([]);
 
