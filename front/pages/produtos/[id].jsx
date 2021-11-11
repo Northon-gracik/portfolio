@@ -57,6 +57,3 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => bindActionCreators(CartAction, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products);
-
-
-export default Products;
