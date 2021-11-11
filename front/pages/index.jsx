@@ -1,6 +1,6 @@
 //import Corner from "react-github-corner"
 
-//import Header from "../src/components/Header";
+import Header from "../src/components/Header";
 //import FundoPrincipal from "../src/components/FundoPrincipal";
 //import { getAllProducts } from "../src/services/apiGet.js";
 //import { useState } from "react";
