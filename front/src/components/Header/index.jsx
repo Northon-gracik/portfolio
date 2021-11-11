@@ -3,7 +3,7 @@
 import ActiveLink from "../ActiveLink";
 
 //import Product  from "../../services/product";
-//import { AuthContext } from "../authContext/index.jsx";
+import { AuthContext } from "../authContext/index.jsx";
 
 
 function Header() {
