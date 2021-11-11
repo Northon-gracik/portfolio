@@ -10,7 +10,7 @@ import { connect } from "react-redux"
 import { bindActionCreators } from "redux";
 
 import * as CartAction from "../src/store/actions/cart";
-import { AuthContext } from "../src/components/authContext/index.jsx";
+import { AuthContext } from "../src/components/AuthContext";
 import { useContext } from "react";
 
 function Cart(
@@ -81,12 +81,10 @@ function Cart(
     )
 }
 
-// const mapStateToProps = state => ({
-//     cart: state.cart.products,
-// });
+const mapStateToProps = state => ({
+    cart: state.cart.products,
+});
 
-// const mapDispatchToProps = dispatch => bindActionCreators(CartAction, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators(CartAction, dispatch);
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Cart);
-
-export default Cart
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
