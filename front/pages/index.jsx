@@ -10,7 +10,9 @@ function Home (props) {
 
   const [dataProducts, setDataProducts] = useState([]);
 
-  getAllProducts().then( data => console.log(data))
+  getAllProducts().then( data => setDataProducts(data));
+
+  fetch("https://api.github.com/users/Northon-gracik").then( data => console.log(data));
 
   return (
     <div>

@@ -3,12 +3,12 @@ import cors from "cors";
 
 import './database/index.js'
 
-import { producer } from './kafka/index.js'
+// import { producer } from './kafka/index.js'
 
 import { router } from "./router.js";
 
 var corsOptions = {
-  origin: process.env.CLIENT_URL,
+  origin: "http://localhost:3000",
   optionsSuccessStatus: 200
 };
 
@@ -18,11 +18,11 @@ app.use(express.json());
 
 app.use(cors(corsOptions));
 
-app.use((req, res, next) => {
-  req.producer = producer;
+// app.use((req, res, next) => {
+//   req.producer = producer;
 
-  return next();
-});
+//   return next();
+// });
 
 app.use("/v1", router);
 

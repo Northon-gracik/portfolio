@@ -21,6 +21,7 @@ const getDefault = async url => {
         // console.log("[get]", url, data);
         return data;
     } catch (error) {
+        console.error("[get]", error);
         return error
     }
 }

@@ -60,7 +60,9 @@ orderService.addOrderItem = (id, orderItem) => {
     throw new Error("Order not exists")
 }
 
-orderService.closeOrder = async (id, payment, producer) => {
+orderService.closeOrder = async (id, payment, 
+    // producer
+    ) => {
     const order = await orderRepository.findById(id);
     if(!order) throw new Error("Order not found");
     if(order.statusPayment !== "Pending") throw new Error("Order status not pending");
@@ -69,7 +71,7 @@ orderService.closeOrder = async (id, payment, producer) => {
     const user = await userService.findById(order.idUser);
     const orderItens = await orderItemService.findByOrder(order.id);
     const products = await getProductByOrder(orderItens);
-    sendTicket(producer, JSON.stringify({ payment, order, products, user }))
+    // sendTicket(producer, JSON.stringify({ payment, order, products, user }))
     return orderUpdate;
 }
 
