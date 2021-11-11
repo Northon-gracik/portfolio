@@ -6,9 +6,9 @@ import { api } from "../../services/api";
 import { getUserByToken } from "../../services/apiGet";
 import { authUser } from "../../services/apiPost";
 
-export const AuthContext = createContext({});
+const AuthContext = createContext({});
 
-export function AuthProvider({ children }){
+function AuthProvider({ children }){
 
     // const [user, setUser] = useState(null);
     // const isAuthenticated = !!user;
@@ -78,3 +78,5 @@ export function AuthProvider({ children }){
         </AuthContext.Provider>
     )
 } 
+
+export { AuthContext, AuthProvider };
