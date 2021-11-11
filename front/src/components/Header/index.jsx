@@ -7,11 +7,11 @@ import { AuthContext } from "../AuthContext";
 
 
 function Header() {
-       const { signOut, user } = useContext(AuthContext);
-       const product = Product(); 
+    //    const { signOut, user } = useContext(AuthContext);
+    //    const product = Product(); 
 
        async function logout() {
-           await signOut();
+        //    await signOut();
        }
 
     return (
