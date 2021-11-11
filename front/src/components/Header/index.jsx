@@ -26,11 +26,11 @@ function Header() {
                 <nav>
                     {!user ?
                         <>
-                            <a href="/login">Login</a>
+                            {/* <a href="/login">Login</a> */}
                         </>
                         :
                         <>
-                            <a href="/dashboard">{user.name}</a>
+                            {/* <a href="/dashboard">{user.name}</a> */}
                             <a onClick={logout}>Logout</a>
                         </>
                     }
