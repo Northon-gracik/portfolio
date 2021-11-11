@@ -16,10 +16,11 @@ function Home(props) {
 
   return (
     <div>
+      <Header />
       <div>
         <h3>Mais vistos</h3>
       </div>
-      {/* <Header />
+      {/* 
       <Corner octoColor="#E42044" />
       <FundoPrincipal />
         <div className="card-box">

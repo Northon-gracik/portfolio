@@ -15,9 +15,11 @@ function Header() {
 
     return (
         <header className="Header">
-            {/* <div className="Container">
+            <div className="Container">
+                <h1 className="Title">Portfolio - Northon Gracik</h1>
+            </div>
+            {/* 
                 <ActiveLink style={{ width: '50%' }} href="/"  >
-                    <h1 className="Title">Portfolio - Northon Gracik</h1>
                 </ActiveLink>
                 <nav>
                     {!user ?
@@ -32,7 +34,7 @@ function Header() {
                     }
                     <a href="/checkout">{product.length}</a>
                 </nav>
-            </div> */}
+             */}
         </header>
     )
 }
