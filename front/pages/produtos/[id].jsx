@@ -50,10 +50,13 @@ function Products(
 
 // }
 
-const mapStateToProps = state => ({
-    cart: state.cart.products,
-});
+// const mapStateToProps = state => ({
+//     cart: state.cart.products,
+// });
 
-const mapDispatchToProps = dispatch => bindActionCreators(CartAction, dispatch);
+// const mapDispatchToProps = dispatch => bindActionCreators(CartAction, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Products);
+// export default connect(mapStateToProps, mapDispatchToProps)(Products);
+
+
+export default Products;
