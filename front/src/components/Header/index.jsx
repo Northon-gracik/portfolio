@@ -15,12 +15,13 @@ function Header() {
 
     return (
         <header className="Header">
-            <div className="Container">
-                <h1 className="Title">Portfolio - Northon Gracik</h1>
-            </div>
-            {/* 
+            <div className="Container"> 
                 <ActiveLink style={{ width: '50%' }} href="/"  >
+                <h1 className="Title">Portfolio - Northon Gracik</h1>
+
                 </ActiveLink>
+            </div>
+            {/*
                 <nav>
                     {!user ?
                         <>
