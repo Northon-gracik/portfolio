@@ -10,59 +10,56 @@ const AuthContext = createContext({});
 
 function AuthProvider({ children }){
 
-    // const [user, setUser] = useState(null);
-    // const isAuthenticated = !!user;
+    const [user, setUser] = useState(null);
+    const isAuthenticated = !!user;
 
     function setAuthenticate(token, user){ 
-        // setCookie(undefined, "portifolio-Token", token, { 
-        //     maxAge: 60 * 60 * 1, //1 hour
-        // });
+        setCookie(undefined, "portifolio-Token", token, { 
+            maxAge: 60 * 60 * 1, //1 hour
+        });
 
-        // api.defaults.headers['authorization'] = `Bearer ${token}`
+        api.defaults.headers['authorization'] = `Bearer ${token}`
 
-        // setUser(user);
+        setUser(user);
 
     }
 
     useEffect( async () => {
         try {
-            // const { 'portifolio-Token': token} = parseCookies();
-            // if(token) {
-            //     const { user } = await getUserByToken();
-            //     setUser(user)
-            // }
+            const { 'portifolio-Token': token} = parseCookies();
+            if(token) {
+                const { user } = await getUserByToken();
+                setUser(user)
+            }
         }catch (err) {
             console.error(err)
         }
     }, [])
 
     async function signIn({email, password}){
-        // const { token, user } = await authUser(email, password);
-        // setAuthenticate(token, user);
+        const { token, user } = await authUser(email, password);
+        setAuthenticate(token, user);
 
         Router.push("/");
     }
 
-    async function signOut(){
-               
-        //const { 'portifolio-Token': token} = parseCookies();
-        
-        // setCookie(null, "portifolio-Token", "", { 
-        //     maxAge: 1, //instanted
-        // });
+    async function signOut(){        
+        setCookie(null, "portifolio-Token", "", { 
+            maxAge: 1, //instanted
+        });
 
-        // api.defaults.headers['authorization'] = ` `;
+        api.defaults.headers['authorization'] = ` `;
 
-        // setUser(null);
+        setUser(null);
 
         Router.push("/");
     }
 
     async function registerAccount({name, email, password}){ 
         try {
-            // const { token, userCreated } = await registerAccount( name, email, password );
+            const { token, userCreated } = await registerAccount( name, email, password );
         
-            // setAuthenticate(token, userCreated);
+            setAuthenticate(token, userCreated);
 
             Router.push("/")
         }
