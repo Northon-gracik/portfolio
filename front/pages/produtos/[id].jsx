@@ -1,32 +1,32 @@
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
-// import { bindActionCreators } from "redux";
-// import { connect } from "react-redux"
-// import * as CartAction from "../../src/store/actions/cart";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux"
+import * as CartAction from "../../src/store/actions/cart";
 
-// import { getProduct } from "../../src/services/apiGet";
+import { getProduct } from "../../src/services/apiGet";
 
-// import ActiveLink from "../../src/components/ActiveLink";
-// import Header from "../../src/components/Header"
-// import { useEffect, useState } from "react";
+import ActiveLink from "../../src/components/ActiveLink";
+import Header from "../../src/components/Header"
+import { useEffect, useState } from "react";
 
 function Products(
-    // { toggleCart, cart }
+    { toggleCart, cart }
     ) {
 
-    // const { query } = useRouter();
-    // const { id } = query;
+    const { query } = useRouter();
+    const { id } = query;
 
-    // const [ product, setProduct ] = useState({});
+    const [ product, setProduct ] = useState({});
     
-    // useEffect(() => {
-    //     if(id)
-    //         getProduct(id).then( data => setProduct(data));
-    // }, [id])
+    useEffect(() => {
+        if(id)
+            getProduct(id).then( data => setProduct(data));
+    }, [id])
 
     return (
         <div>
-            {/* <Header />
+            <Header />
             <div>
                 <h1>{product.name}</h1>
                 <p>{product.stack}</p>
@@ -34,7 +34,7 @@ function Products(
                 <ActiveLink href={`${product.link}`}>Link</ActiveLink>
                 <br />
                 <button onClick={() => toggleCart(product)}>Colocar no carrinho</button>
-            </div> */}
+            </div>
         </div>
 
     )
@@ -50,13 +50,13 @@ function Products(
 
 // }
 
-// const mapStateToProps = state => ({
-//     cart: state.cart.products,
-// });
+const mapStateToProps = state => ({
+    cart: state.cart.products,
+});
 
-// const mapDispatchToProps = dispatch => bindActionCreators(CartAction, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators(CartAction, dispatch);
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Products);
+export default connect(mapStateToProps, mapDispatchToProps)(Products);
 
 
 export default Products;

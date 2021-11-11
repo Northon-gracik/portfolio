@@ -1,27 +1,27 @@
-// import { parseCookies } from "nookies";
-// import { getOrdersData } from "../src/services/apiGet";
-// import { getAPIClient } from "../src/services/axios";
-// import { useForm } from "react-hook-form";
+import { parseCookies } from "nookies";
+import { getOrdersData } from "../src/services/apiGet";
+import { getAPIClient } from "../src/services/axios";
+import { useForm } from "react-hook-form";
 
-// import Header from "../src/components/Header";
-// import { createProduct } from "../src/services/apiPost";
+import Header from "../src/components/Header";
+import { createProduct } from "../src/services/apiPost";
 
 const admin = () => {
-    // const { register, handleSubmit } = useForm();
-    // getOrdersData().then(data => console.log(data));
+    const { register, handleSubmit } = useForm();
+    getOrdersData().then(data => console.log(data));
 
-    // const handleCreateProduct = data => {
-    //     data = {
-    //         ...data, 
-    //         quantity: parseInt(data.quantity),
-    //         price: parseInt(data.price)
-    //     }
-    //     createProduct(data)
-    // };
+    const handleCreateProduct = data => {
+        data = {
+            ...data, 
+            quantity: parseInt(data.quantity),
+            price: parseInt(data.price)
+        }
+        createProduct(data)
+    };
 
     return (
         <div>
-            {/* <Header />
+            <Header />
             <h3>Cadastrar Produto</h3>
 
             <form onSubmit={handleSubmit(handleCreateProduct)}>
@@ -85,7 +85,7 @@ const admin = () => {
                 </label>
                 <br />
                 <button>Criar</button>
-            </form> */}
+            </form>
         </div>
     )
 }

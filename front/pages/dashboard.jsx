@@ -1,26 +1,26 @@
-// import { parseCookies } from "nookies";
-// import { useContext, useEffect, useState } from "react";
-// import { getAPIClient } from "../src/services/axios";
+import { parseCookies } from "nookies";
+import { useContext, useEffect, useState } from "react";
+import { getAPIClient } from "../src/services/axios";
 
-// import { AuthContext } from "../src/components/authContext/index.jsx";
+import { AuthContext } from "../src/components/AuthContext";
 
-// import { getOrderByUser } from "../src/services/apiGet";
+import { getOrderByUser } from "../src/services/apiGet";
 
-// import Header from "../src/components/Header";
-// import OrdersDashboard from "../src/components/OrdersDashboard";
+import Header from "../src/components/Header";
+import OrdersDashboard from "../src/components/OrdersDashboard";
 
 
 
 function dashboard(props) {
-    // const [orders, setOrders] = useState([]);
+    const [orders, setOrders] = useState([]);
 
-    // get(getOrderByUser, {}, setOrders);
+    get(getOrderByUser, {}, setOrders);
 
-    // const { user } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     return (
         <div>
-            {/* <Header />
+            <Header />
             <div>
                 {!user ?
                     <div></div>
@@ -37,7 +37,7 @@ function dashboard(props) {
                         </div>
                     </>
                 } 
-            </div> */}
+            </div>
         </div >
     )
 }
