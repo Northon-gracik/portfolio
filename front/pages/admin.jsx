@@ -90,21 +90,21 @@ const admin = () => {
     )
 }
 export async function getServerSideProps(ctx) {
-    const apiClient = getAPIClient(ctx)
-    const { 'portifolio-Token': token } = parseCookies(ctx);
+    // const apiClient = getAPIClient(ctx)
+    // const { 'portifolio-Token': token } = parseCookies(ctx);
 
-    apiClient.defaults.headers['authorization'] = `Bearer ${token}`;
+    // apiClient.defaults.headers['authorization'] = `Bearer ${token}`;
 
-    const { data } = await apiClient.get('a')
+    // const { data } = await apiClient.get('a')
 
-    if (!token && !data) {
-        return {
-            redirect: {
-                destination: '/login',
-                permanent: false
-            }
-        }
-    }
+    // if (!token && !data) {
+    //     return {
+    //         redirect: {
+    //             destination: '/login',
+    //             permanent: false
+    //         }
+    //     }
+    // }
 
     return {
         props: {
