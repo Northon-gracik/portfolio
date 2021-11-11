@@ -16,11 +16,12 @@ function Home(props) {
 
   return (
     <div>
+      <div>
+        <h3>Mais vistos</h3>
+      </div>
       {/* <Header />
       <Corner octoColor="#E42044" />
       <FundoPrincipal />
-      <div>
-        <h3>Mais vistos</h3>
         <div className="card-box">
           {dataProducts.map(data => {
             return (
@@ -34,7 +35,6 @@ function Home(props) {
               </ul>
             )
           })}
-        </div>
       </div> */}
       {/* 
 
