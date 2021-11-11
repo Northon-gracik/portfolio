@@ -1,22 +1,17 @@
-
 import Router from "next/router";
-
-import Product from "../src/services/product";
-import Header from "../src/components/Header"
-import { createOrder } from "../src/services/apiPost";
-
+import { useContext } from "react";
 
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux";
-
 import * as CartAction from "../src/store/actions/cart";
+
+import Product from "../src/services/product";
+import { createOrder } from "../src/services/apiPost";
 import { AuthContext } from "../src/components/AuthContext";
-import { useContext } from "react";
 
-function Cart(
-    { cleanCart }
-) {
+import Header from "../src/components/Header"
 
+function Cart({ cleanCart }) {
 
     const { user } = useContext(AuthContext);
 
