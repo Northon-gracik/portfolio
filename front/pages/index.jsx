@@ -9,7 +9,10 @@ import { getAllProducts } from "../src/services/apiGet.js";
 function Home(props) {
   // const { dataProducts } = props
 
-  const [dataProducts, setDataProducts] = useState([]);
+  const [dataProducts, setDataProducts] = useState([{
+    name: "",
+    description: ""
+  }]);
 
   getAllProducts().then(data => setDataProducts(data));
 
