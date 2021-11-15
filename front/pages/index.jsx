@@ -25,17 +25,17 @@ function Home(props) {
         <h3>Mais vistos</h3>
       </div>
       <div className="card-box">
-        //{dataProducts.map(data => {
-        //  return (
-          //  <ul key={data._id}>
-            //  <a href={`/produtos/${data._id}`}>
-              //  <div className="card">
-                //  <h3>{data.name}</h3>
-                  //<p>{data.description}</p>
-//                </div>
-  //            </a>
-    //        </ul>
-      //    )
+        {dataProducts.map(data => {
+          return (
+            <ul key={data._id}>
+              <a href={`/produtos/${data._id}`}>
+                <div className="card">
+                  <h3>{data.name}</h3>
+                  <p>{data.description}</p>
+                </div>
+              </a>
+            </ul>
+          )
         })}
       </div>
       {/* 
