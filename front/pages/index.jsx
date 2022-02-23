@@ -1,4 +1,3 @@
-//git para deploy na vercel
 import { useState } from "react";
 import Corner from "react-github-corner"
 

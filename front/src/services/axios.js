@@ -4,15 +4,14 @@ import { parseCookies } from "nookies";
 
 export function getAPIClient(ctx) {
   const api = axios.create({
-    baseURL: "http://localhost:8000/v1/",
+    baseURL: process.env.URL_BACK,
     httpAgent: new http.Agent({ keepAlive: true }),
     proxy: {
       protocol: "http",
-      host: "localhost"
     }
   });
 
-  
+
   api.interceptors.request.use(async config => {
     const { 'portifolio-Token': token } = parseCookies(ctx);
     if (token) {
