@@ -15,6 +15,8 @@ const productController  = new ProductController();
 const orderController = new OrderController();
 const orderItemController = new OrderItemController();
 
+router.get('/', (req, res) => res.json({ 'message': 'HelloWord'}))
+
 router.post("/register", userController.register); //registro de usuario
 
 router.post("/authenticate", userController.authenticate); //autenticacao de usuario com senha e login
